@@ -1,460 +1,150 @@
-html,
 body {
+  background-color: black;
   scroll-behavior: smooth;
-  opacity: 1;
 
   margin: 0;
-}
-
-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
-
-  font: 16px "Roboto", sans-serif;
-  background-color: black;
 }
 
-* {
-  box-sizing: border-box;
+ul {
+  list-style-type: none;
 }
 
-figure {
-  overflow: hidden;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  flex: 1;
-  position: relative; /* damit figcaption sich relativ dazu positioniert */
-  display: flex;
-  overflow: hidden;
-  border-radius: 100%;
-}
-
-.main_header {
-  height: 100px;
-  display: flex;
-  justify-content: flex-start;
-  gap: 250px;
-  align-items: center;
-  margin: auto;
-
-  max-width: 1440px;
-
-  position: relative;
+header {
+  background-color: #0a222c;
+  box-shadow: 1px 2px 11px 8px rgba(116, 230, 255, 0.63);
+  width: 100vw;
 }
 
 .header-limiter {
-  width: 100%;
+  margin: auto;
+
+  width: 600px;
+  height: 100px;
+
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #0a222c;
-  box-shadow: 1px 2px 11px 8px rgba(116, 230, 255, 0.63);
+}
+
+.button {
+  margin: 5px;
+  border-radius: 10px;
+  background-color: #0a222c;
+  border-color: lightblue;
+  color: lightblue;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+.logo {
+  width: 350px;
+  height: 350px;
 }
 
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   flex: 1;
-  padding: 0 2px;
-  max-width: 1440px;
-}
-
-.closed_menu {
-  transform: translateX(100%);
-}
-
-.resp-button {
-  display: none;
-}
-
-.resp_menu_box {
-  background-color: #0a222c;
-  display: flex;
-  flex-direction: column;
-
-  width: 180px;
-  height: 350px;
-
-  position: absolute;
-  top: 0;
-  right: 0;
-  overflow: hidden;
-  transition: all 250ms ease-in-out;
-}
-
-@media (min-width: 1440px) {
-  .main_header {
-    padding-top: 30px;
-    padding-left: 15px;
-    margin-bottom: 20px;
-    height: 100px;
-    display: flex;
-    justify-content: flex-start;
-    gap: 350px;
-    align-items: center;
-    margin: auto;
-    overflow: hidden;
-    width: 1440px;
-  }
-
-  #main_content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 30px;
-    margin-top: 10px;
-  }
-
-  .album_card {
-    min-width: 220px;
-    min-height: 220px;
-  }
-}
-
-@media (min-width: 760px) {
-  .main_header {
-    padding-top: 30px;
-    padding-left: 15px;
-    margin-bottom: 20px;
-    height: 100px;
-    display: flex;
-    justify-content: flex-start;
-    gap: 150px;
-    align-items: center;
-    margin: auto;
-    overflow: hidden;
-    width: 1440px;
-  }
-}
-
-@media (max-width: 760px) {
-  .main_header {
-    padding-top: 30px;
-    padding-left: 15px;
-    margin-bottom: 20px;
-    height: 100px;
-    display: flex;
-    justify-content: flex-start;
-    gap: 150px;
-    align-items: center;
-    margin: auto;
-    overflow: hidden;
-    width: 1440px;
-  }
-
-  .resp-button {
-    display: block;
-    border-radius: 20px;
-    height: 40px;
-    border: 1px solid lightblue;
-    background-color: #0a222c;
-    color: lightblue;
-  }
-  .resp-button:hover {
-    background-color: white;
-    color: #0a222c;
-  }
-  .buttonAlbum {
-    display: none;
-  }
-
-  .buttonMemory {
-    display: none;
-  }
-}
-@media (max-width: 530px) {
-  .logo {
-    max-width: 100px;
-    max-height: 100px;
-  }
-  h1 {
-    color: white;
-    font-size: 12px;
-  }
-
-  .main_header {
-    padding-top: 30px;
-    padding-left: 30px;
-    margin-bottom: 20px;
-    height: 100px;
-    display: flex;
-    justify-content: flex-start;
-    gap: 5px;
-    align-items: center;
-    margin: auto;
-    overflow: hidden;
-    width: 1440px;
-  }
-
-  .resp-button {
-    display: block;
-    border-radius: 20px;
-    height: 40px;
-    border: 1px solid lightblue;
-    background-color: #0a222c;
-    color: lightblue;
-  }
+  width: 100%;
 }
 
 .main-limiter {
+  background-color: black;
+  margin: 0 auto;
+  max-width: 2000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
   color: white;
 }
 
-.buttonDialog {
-  height: 30px;
-  width: 100px;
-  border-radius: 10px;
+.main-images {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.main-images:hover {
+  padding: 2px;
+  background-color: white;
+  transform: scale(1.2);
+}
 dialog {
-  width: 710px;
-  max-width: 90vw;
-  max-height: 97vh;
-  height: 700px;
-  border: none;
-  overflow: hidden;
-  border-radius: 100%;
-  padding: 0;
+  width: 50vw;
+  height: 50vh;
   background-color: black;
 }
 
-.dialog-content {
+.fensterDialog {
   display: flex;
   flex-direction: column;
-  height: 100%;
-}
-
-figcaption {
-  position: absolute; /* jetzt NICHT mehr im Layoutfluss! */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  background-color: rgba(0, 0, 0, 0.2);
-  color: #f0f0f0;
-  font-size: 90%;
-
-  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  margin: 0;
-  opacity: 0;
-  padding: 30px 0 0;
-
-  transform-origin: bottom right;
-  transform: translate(0px, -250px) rotate(180deg);
-  transition: all 0.2s 0.4s ease-in-out;
-
-  visibility: hidden; /* <--- neu */
-  pointer-events: none; /* <--- neu */
-
-  transform: translateY(30px);
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out,
-    visibility 0s 0.4s;
 }
 
-figure:focus figcaption,
-figure:hover figcaption {
-  opacity: 1;
-  transition-delay: 0s;
-  transform: translate(0px, -254px) rotate(0deg);
-  border-radius: 10px;
-
-  visibility: visible; /* <--- jetzt sichtbar */
-  pointer-events: auto; /* <--- jetzt klickbar */
-  transform: translate(0);
-  transition-delay: 0s;
-}
-
-figure h2 {
-  background: rgba(0, 0, 0, 0.1);
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-  transform: translateY(-127px);
-  transition: all 0.3s ease-in-out;
-}
-figure:focus h2,
-figure:hover h2 {
-  transform: translateY(20px);
-  transform: translateX(-75px);
-  transition-delay: 0.4s;
-}
-
-.Bild {
-  width: 250px;
-  height: 250px;
-  border: 2px solid black;
-  border-radius: 100%;
-}
-
-.Bildheader {
+.dialog-header {
   display: flex;
-  justify-content: center;
-  align-items: center; /* zentriert den Inhalt vertikal */
-  height: 90px; /* vorher 30px */
-  background-color: #0a222c; /* optional: für bessere Sichtbarkeit */
-  box-shadow: 1px 2px 11px 8px rgba(116, 230, 255, 0.63);
+  justify-content: space-between;
+  align-items: center;
 }
 
-.Bildfooter {
+.dialog-footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 120px;
+}
+
+dialog img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bild-limiter {
+  width: 200px;
+  height: 200px;
+}
+
+.dialogButton {
+  margin: 5px;
+  border-radius: 10px;
   background-color: #0a222c;
-  padding: 0 150px; /* etwas Abstand links/rechts */
-  box-shadow: 1px 2px 8px 11px rgba(116, 230, 255, 0.63);
-}
-
-@media (min-width: 2000px) {
-  .Bildheader {
-    background-color: black;
-    box-shadow: none;
-  }
-
-  .Bildfooter {
-    background-color: black;
-    box-shadow: none;
-  }
-
-  .Bild {
-    width: 500px;
-    height: 500px;
-  }
-
-  .dialog {
-  }
-}
-
-@media (max-width: 900px) {
-  .Bildheader {
-    background-color: black;
-    box-shadow: none;
-  }
-
-  .Bildfooter {
-    background-color: black;
-    box-shadow: none;
-  }
-
-  .Bild {
-    width: 600px;
-    height: 600px;
-    object-fit: cover;
-    object-position: center 0;
-  }
-
-  .dialog {
-  }
-}
-@media (max-width: 600px) {
-  .Bildheader {
-    background-color: black;
-    box-shadow: none;
-  }
-
-  .Bildfooter {
-    background-color: black;
-    box-shadow: none;
-  }
-
-  .Bild {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    object-position: center 0;
-  }
-
-  .dialog {
-  }
-
-  figure {
-    overflow: hidden;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    flex: 1;
-    position: relative; /* damit figcaption sich relativ dazu positioniert */
-    display: flex;
-    overflow: hidden;
-    border-radius: 100%;
-  }
-}
-.d_none {
-  display: none;
-}
-
-.buttonAlbum {
-  border-radius: 20px;
-  height: 40px;
-  border: 1px solid lightblue;
-  background-color: #0a222c;
+  border-color: lightblue;
   color: lightblue;
-}
-.buttonAlbum:hover {
-  background-color: white;
-  color: #0a222c;
+  cursor: pointer;
 }
 
-.buttonRESAlbum {
-  border-radius: 20px;
-  height: 20px;
-  border: 1px solid lightblue;
-  background-color: #0a222c;
-  color: lightblue;
-}
-.buttonRESAlbum:hover {
-  background-color: white;
-  color: #0a222c;
-}
-
-.buttonMemory {
-  border-radius: 20px;
-  height: 40px;
-  border: 1px solid lightblue;
-  background-color: #0a222c;
-  color: lightblue;
-}
-
-.buttonMemory:hover {
-  background-color: white;
-  color: #0a222c;
-}
-
-.buttonRESMemory {
-  border-radius: 20px;
-  height: 20px;
-  border: 1px solid lightblue;
-  background-color: #0a222c;
-  color: lightblue;
-}
-
-.buttonRESMemory:hover {
-  background-color: white;
-  color: #0a222c;
-}
-
-.overlayDIV.hidden {
-  display: none;
-}
-
-.overlayDIV {
+.overlay {
   position: absolute;
   top: 100px;
-  bottom: 130px;
+  bottom: 100px;
   right: 0;
   left: 0;
 
@@ -462,157 +152,86 @@ figure:hover h2 {
   backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0.2);
 }
+.hidden {
+  display: none;
+}
+.footer-limiter {
+  margin: auto;
+
+  width: 600px;
+  height: 100px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #0a222c;
+}
 
 footer {
-  margin-top: 50px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 130px;
-  margin: auto;
-  width: 1440px;
-}
-
-.footer-limiter {
-  width: 100%;
-  display: flex;
   background-color: #0a222c;
   box-shadow: 1px 2px 8px 11px rgba(116, 230, 255, 0.63);
-}
-
-a {
-  text-decoration: underline;
-  color: white;
-}
-
-.logo {
-  width: 240px;
-  height: 240px;
-}
-
-.opacity {
-  opacity: 0;
+  width: 100vw;
 }
 
 .company {
+  padding-top: 20px;
   width: 170px;
   height: 40px;
   filter: invert(1) grayscale(1) brightness(2);
 }
 
-.Mainbilder {
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
+.source {
+  text-decoration: none;
 
-.Mainbilder:hover {
-  padding: 2px;
-  background-color: white;
-}
-
-.rotate {
-  transform: rotate(180deg);
-}
-
-.album_card {
-  width: 100px;
-  height: 100px;
-}
-
-#main_content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 15px;
-  margin-bottom: 30px;
-  margin-top: 10px;
-}
-.card {
-  perspective: 1000px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  flex-shrink: 0; /* verhindert, dass Karten schrumpfen */
-  position: relative; /* wichtig für das Flip */
-}
-
-.inner {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/*.card:hover .inner {
- transform: rotateY(180deg);
-}*/
-
-.front,
-.back {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
   color: white;
-
-  border-radius: 50%;
-  backface-visibility: hidden;
 }
 
-.front {
-  background: #0077ff;
-}
-
-.back {
-  background: #00b894;
-  transform: rotateY(180deg);
-}
-
-/* Standard-Hover */
-.card.pending:hover .Mainbilder {
-  padding: 2px;
-  background-color: goldenrod;
-}
-
-/* Richtiges Paar */
-.card.matched .Mainbilder {
-  padding: 2px;
-  background-color: green;
-}
-
-/* Falsches Paar */
-.card.wrong .Mainbilder {
-  padding: 2px;
-  background-color: red;
-}
-
-.animationMischel {
-  animation: card-animation 2s ease-in-out forwards; /* 2 Sekunden, einmalig */
-}
-
-@keyframes card-animation {
-  0% {
-    transform: translate(0, 0);
+@media (max-width: 666px) {
+  .header-limiter {
+    display: flex;
+    justify-content: center;
+    width: 300px;
   }
-  50% {
-    transform: translate(100px, 0); /* Zielpunkt */
+
+  .logo {
+    width: 150px;
+    height: 150px;
   }
-  70% {
-    transform: translate(100px, 0); /* kurz warten */
+
+  .footer-limiter {
+    width: 300px;
+    justify-content: center;
   }
-  100% {
-    transform: translate(0, 0); /* zurück zum Ausgang */
+
+  .company {
+    width: 80px;
+    height: 20px;
   }
 }
 
-.element {
-  animation: moveAndReturn 3s ease-in-out forwards;
+@media (max-width: 410px) {
+  h1 {
+    font-size: 16px;
+  }
+
+  .header-limiter {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    gap: 0;
+  }
+
+  .source {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .bild-limiter {
+    width: 700px;
+    height: 700px;
+  }
 }
