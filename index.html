@@ -35,10 +35,18 @@
           <button class="resp-button" onclick="toggleRespMenu()">
             cloes menu
           </button>
-          <button id="resp-button1" class="buttonAlbum" onclick="showAlbum()">
+          <button
+            id="resp-button1"
+            class="buttonRESAlbum"
+            onclick="showAlbum()"
+          >
             Zurück zum Album
           </button>
-          <button id="resp-button2" class="buttonMemory" onclick="showMemory()">
+          <button
+            id="resp-button2"
+            class="buttonRESMemory"
+            onclick="showMemory()"
+          >
             Memory starten/neuladen
           </button>
         </nav>
@@ -54,7 +62,12 @@
       <div id="main_content" class="contantMain"></div>
 
       <div id="overlay" class="hidden overlayDIV">
-        <dialog id="dialog"></dialog>
+        <dialog
+          role="dialog"
+          id="dialog"
+          aria-modal="true"
+          aria-labelledby="dialogTitle"
+        ></dialog>
       </div>
     </main>
 

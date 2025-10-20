@@ -328,8 +328,16 @@ function showImage(imagesIndex) {
 
 
 function closeDialog() {
-  document.getElementById("dialog").close();
-  overlay.classList.add('hidden');
+  const overlay = document.getElementById("overlay");
+  const dialog = document.getElementById("dialog");
+
+  if (dialog && dialog.open) {
+    dialog.close();
+  }
+
+  if (overlay) {
+    overlay.classList.add("hidden");
+  }
 }
     
 
@@ -369,4 +377,7 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeDialog(); // ESC schließt den Dialog
   }
+  
 });
+
+

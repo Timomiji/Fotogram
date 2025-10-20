@@ -34,9 +34,6 @@ figure {
 }
 
 .main_header {
-  padding-top: 30px;
-  padding-left: 15px;
-  margin-bottom: 20px;
   height: 100px;
   display: flex;
   justify-content: flex-start;
@@ -47,7 +44,6 @@ figure {
   max-width: 1440px;
 
   position: relative;
-  overflow-x: hidden;
 }
 
 .header-limiter {
@@ -101,7 +97,7 @@ main {
     gap: 350px;
     align-items: center;
     margin: auto;
-
+    overflow: hidden;
     width: 1440px;
   }
 
@@ -121,6 +117,22 @@ main {
   }
 }
 
+@media (min-width: 760px) {
+  .main_header {
+    padding-top: 30px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 150px;
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+    width: 1440px;
+  }
+}
+
 @media (max-width: 760px) {
   .main_header {
     padding-top: 30px;
@@ -132,7 +144,7 @@ main {
     gap: 150px;
     align-items: center;
     margin: auto;
-
+    overflow: hidden;
     width: 1440px;
   }
 
@@ -176,7 +188,7 @@ main {
     gap: 5px;
     align-items: center;
     margin: auto;
-
+    overflow: hidden;
     width: 1440px;
   }
 
@@ -327,7 +339,7 @@ figure:hover h2 {
   }
 }
 
-@media (min-width: 600px) {
+@media (max-width: 900px) {
   .Bildheader {
     background-color: black;
     box-shadow: none;
@@ -396,6 +408,19 @@ figure:hover h2 {
   background-color: white;
   color: #0a222c;
 }
+
+.buttonRESAlbum {
+  border-radius: 20px;
+  height: 20px;
+  border: 1px solid lightblue;
+  background-color: #0a222c;
+  color: lightblue;
+}
+.buttonRESAlbum:hover {
+  background-color: white;
+  color: #0a222c;
+}
+
 .buttonMemory {
   border-radius: 20px;
   height: 40px;
@@ -405,6 +430,19 @@ figure:hover h2 {
 }
 
 .buttonMemory:hover {
+  background-color: white;
+  color: #0a222c;
+}
+
+.buttonRESMemory {
+  border-radius: 20px;
+  height: 20px;
+  border: 1px solid lightblue;
+  background-color: #0a222c;
+  color: lightblue;
+}
+
+.buttonRESMemory:hover {
   background-color: white;
   color: #0a222c;
 }
