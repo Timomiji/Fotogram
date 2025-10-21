@@ -32,6 +32,14 @@ const images = [
                 ];
 
 
+let dialogWindow = document.getElementById('dialog');
+
+
+
+
+
+
+
    function showAlbum(){
 
         const image = document.getElementById('main-container');
@@ -48,10 +56,18 @@ const images = [
 
 function openDialog(indexImage){
 
-let dialogWindow = document.getElementById('dialog');
-let blur = document.getElementById('overlay');
+dialogWindow.innerHTML =showDialogImage(indexImage);
+dialogWindow.showModal();
 
-dialogWindow.innerHTML =`
+}
+
+
+
+
+
+
+function showDialogImage(indexImage) {
+  return  `
 
 <div class="fensterDialog">
 <div class="dialog-header">
@@ -67,37 +83,36 @@ dialogWindow.innerHTML =`
 
 </div>
 `;
-
-dialogWindow.showModal();
-blur.classList.remove('hidden');
-
+    
 }
+
 
 
 function closeDialog() {
   document.getElementById('dialog').close();
-
-  let blur= document.getElementById('overlay');
-
-  blur.classList.add('hidden')
 }
+
+
+
+
+
 
 
 
 
 document.addEventListener("keydown", (event) => {
-  const dialog = document.getElementById("dialog");
+  
   
 
-  if (!dialog.open) return;
+  if (!dialogWindow.open) return;
 
   if (event.key === "ArrowRight") {
-    const nextBtn = dialog.querySelector(".dialog-footer button:last-child");
+    const nextBtn = dialogWindow.querySelector(".dialog-footer button:last-child");
     nextBtn.click();
   }
 
   if (event.key === "ArrowLeft") {
-    const prevBtn = dialog.querySelector(".dialog-footer button:first-child");
+    const prevBtn = dialogWindow.querySelector(".dialog-footer button:first-child");
     prevBtn.click();
   }
 
@@ -106,3 +121,14 @@ document.addEventListener("keydown", (event) => {
   }
   
 });
+
+
+
+
+
+
+   
+    
+
+
+
