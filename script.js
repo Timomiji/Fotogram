@@ -52,6 +52,10 @@ let dialogWindow = document.getElementById('dialog');
 
 
    
+function closeAlbum() {
+  document.getElementById('main-container').innerHTML = "";
+}
+
 
 
 function openDialog(indexImage){
@@ -91,6 +95,7 @@ function showDialogImage(indexImage) {
 function closeDialog() {
   document.getElementById('dialog').close();
 }
+
 
 
 
