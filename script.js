@@ -1,7 +1,3 @@
-
-
-
-
 const images = [
        
     "./img/bird-100880_1280.jpg",
@@ -34,12 +30,6 @@ const images = [
 
 let dialogWindow = document.getElementById('dialog');
 
-
-
-
-
-
-
    function showAlbum(){
 
         const image = document.getElementById('main-container');
@@ -50,12 +40,10 @@ let dialogWindow = document.getElementById('dialog');
         image.innerHTML+=`<img tabindex=0 onclick="openDialog(${indexImage})" class="main-images" src="${images[indexImage]}">`;
     }
 
-
    
 function closeAlbum() {
   document.getElementById('main-container').innerHTML = "";
 }
-
 
 
 function openDialog(indexImage){
@@ -64,10 +52,6 @@ dialogWindow.innerHTML =showDialogImage(indexImage);
 dialogWindow.showModal();
 
 }
-
-
-
-
 
 
 function showDialogImage(indexImage) {
@@ -91,18 +75,9 @@ function showDialogImage(indexImage) {
 }
 
 
-
 function closeDialog() {
   document.getElementById('dialog').close();
 }
-
-
-
-
-
-
-
-
 
 
 document.addEventListener("keydown", (event) => {
