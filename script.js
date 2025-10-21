@@ -79,7 +79,7 @@ function showDialogImage(indexImage) {
 </div>
 <div class="bild-limiter">
 <img src="${images[indexImage]}">
-</di>
+</div>
 <div class="dialog-footer">
 <button id="prevBtn" class="dialogButton" aria-label="Vorher Bild" onclick="openDialog(${(indexImage - 1 + images.length) % images.length})" >⬅️ previ</button>
 <button id="nextBtn" class="dialogButton" aria-label="Nächstes Bild"  onclick="openDialog(${(indexImage + 1) % images.length})" >next ➡️</button>
