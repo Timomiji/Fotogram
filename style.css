@@ -137,6 +137,7 @@ dialog img {
   object-position: center;
   border: 5px solid lightblue;
   margin-bottom: 0;
+  box-sizing: border-box;
 }
 
 .bild-limiter {
